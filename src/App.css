@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300&display=swap');
+
+.App {
+  text-align: center;
+  font-family: 'Karla', sans-serif;
+  background: linear-gradient(#000000, #5D5C5C);
+  margin: auto;
+}
+
+.App-header {
+  background-color: #000000;
+  min-height: 2vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Karla', sans-serif;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+a:link {
+  color: #FFFFFC;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: #FFFFFC;
+}
+
+/* mouse over link */
+a:hover {
+  color: #c9c8d1;
+}
+
+/* selected link */
+a:active {
+  color: #FFFFFC;
+}
