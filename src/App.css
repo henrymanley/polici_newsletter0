@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 
 .App {
   text-align: center;
   font-family: 'Karla', sans-serif;
-  background: linear-gradient(#000000, #5D5C5C);
+  background: #000000;
   margin: auto;
 }
 
@@ -37,4 +37,9 @@ a:hover {
 /* selected link */
 a:active {
   color: #FFFFFC;
+}
+
+.box {
+  display: flex;
+  align-items: stretch;
 }

@@ -1,8 +1,8 @@
 import './App.css';
 import Form from "./components/Form";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
 
 const theme = createMuiTheme({
     backgroundColor: "#000000",
@@ -20,7 +20,11 @@ function App() {
       <ThemeProvider theme={theme}>
           <div className="App">
               <header className="App-header"></header>
-              <Form></Form>
+
+              <div className="box">
+                  <div><Form></Form></div>
+              </div>
+
               <Footer></Footer>
           </div>
       </ThemeProvider>
@@ -29,3 +33,4 @@ function App() {
 }
 
 export default App;
+git

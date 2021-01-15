@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
         '& > *': {
@@ -18,8 +19,6 @@ export default function OutlinedButtons() {
     return (
         <div style={{
             textAlign:'left',
-            marginLeft: 'auto',
-            marginRight: 'auto',
             paddingLeft: '40px',
             marginBottom:'40px',
             color: "#FFFFFC",
@@ -35,6 +34,8 @@ export default function OutlinedButtons() {
                 <h2>
                     <bf>Bringing Data to Your Day In Under Three Minutes 📈</bf>
                 </h2>
+
+
                 <hr></hr>
                 <p>
                     Get the free, weekly email that brings data science,
@@ -51,7 +52,7 @@ export default function OutlinedButtons() {
                            variant="filled"
                            label="Required"
                            defaultValue="Your Email"
-                           inputProps={{ style: { color: '#727478', backgroundColor:"#D6D6D6"}}}
+                           inputProps={{ style: { color: '#727478', backgroundColor:"#FFFFFC"}}}
                            style={{
                                width: "42%",
                                color: 'black',
@@ -65,8 +66,8 @@ export default function OutlinedButtons() {
             <Button variant="contained"
                     style={{
                         borderRadius: 35,
-                        backgroundColor: "#000000",
-                        color:"#FFFFFC",
+                        backgroundColor: "#FFFFFC",
+                        color:"#000000",
                     }}>Submit</Button>
 
             {/*<h2 style={{*/}
