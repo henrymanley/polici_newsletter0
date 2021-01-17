@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../Signup.css'
 import { Container, Row, Col } from 'react-bootstrap';
+import { Redirect } from 'react-router-dom'
 
 const key = 'founders@polici.org'
 const val = 'test'
