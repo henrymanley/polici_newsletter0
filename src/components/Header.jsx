@@ -18,10 +18,8 @@ export default function Header() {
                             color:'white'}}></AccountCircleIcon>
                     </IconButton>
                 </Link>
-
             </div>
         </Router>
-
 
     );
 }
