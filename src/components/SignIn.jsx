@@ -6,7 +6,7 @@ import { Redirect } from 'react-router-dom'
 const key = 'founders@polici.org'
 const val = 'test'
 
-export default class Login extends Component {
+export default class SignIn extends Component {
 
     constructor() {
         super();
@@ -29,7 +29,7 @@ export default class Login extends Component {
 
     render() {
         if (this.state.redir) {
-            return <Redirect to='/Submission' />
+            return <Redirect to='/Newsletter' />
         }
         return (
 

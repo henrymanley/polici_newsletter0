@@ -26,6 +26,7 @@ export default function OutlinedButtons() {
             paddingBottom: '40px',
             marginBottom:'40px',
             color: "#FFFFFC",
+            backgroundColor: "#000000"
         }}>
             <div className="submitIntro">
                 <h1>Hi there! 🔥</h1>

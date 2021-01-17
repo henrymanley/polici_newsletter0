@@ -1,13 +1,9 @@
 import './App.css';
-import Form from "./components/Form";
 import Submission from "./components/Submission";
 import SignIn from "./components/SignIn";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import HomePage from "./components/HomePage";
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import { Router, Route} from 'react-router-dom'
-
-
+import { Switch, BrowserRouter as Router, Route, withRouter } from "react-router-dom";
 
 const theme = createMuiTheme({
     backgroundColor: "#000000",
@@ -20,19 +16,17 @@ const theme = createMuiTheme({
 
 function App() {
   return (
-      <ThemeProvider theme={theme}>
-              <Header />
-          <div className="App">
-              <div className="box">
-                  <div><Form></Form></div>
-              </div>
-
-              <Footer></Footer>
-              <Submission />
-              <SignIn />
-          </div>
-      </ThemeProvider>
-
+      <div>
+          <Router>
+              <Switch>
+                  <ThemeProvider theme={theme}>
+                      <Route exact path="/" component={HomePage}> </Route>
+                      <Route exact path="/Newsletter" component={withRouter(Submission)}></Route>
+                      <Route exact path="/Sign-In" component={withRouter(SignIn)}></Route>
+                  </ThemeProvider>
+              </Switch>
+          </Router>
+      </div>
   );
 }
 
