@@ -12,7 +12,7 @@ export default function Header() {
                 float:'right',
                 top:'-40px',
                 margin:'20px'}}>
-                <Link to="./SignIn">
+                <Link to="./Sign-In">
                     <IconButton>
                         <AccountCircleIcon style={{
                             color:'white'}}></AccountCircleIcon>
