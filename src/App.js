@@ -20,7 +20,7 @@ function App() {
           <Router>
               <Switch>
                   <ThemeProvider theme={theme}>
-                      <Route exact path="/" component={HomePage}></Route>
+                      <Route exact path="/" component={withRouter(HomePage)}></Route>
                       <Route exact path="/Newsletter" component={withRouter(Submission)}></Route>
                       <Route exact path="/Sign-In" component={withRouter(SignIn)}></Route>
                   </ThemeProvider>
