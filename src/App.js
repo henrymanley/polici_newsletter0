@@ -3,7 +3,7 @@ import Submission from "./components/Submission";
 import SignIn from "./components/SignIn";
 import HomePage from "./components/HomePage";
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import { Switch, BrowserRouter as Router, Route, withRouter } from "react-router-dom";
+import { Switch, BrowserRouter as Router, Route, withRouter, Redirect } from "react-router-dom";
 
 const theme = createMuiTheme({
     backgroundColor: "#000000",
