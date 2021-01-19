@@ -1,8 +1,18 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Contact from "../components/Contact";
+import {BrowserRouter as Router, Link, withRouter} from "react-router-dom";
 
-export default function FootInfo() {
-    return (
+class Footer extends Component {
+    handleClick = () => {
+        this.props.history.push("./Privacy");
+    }
+
+    handleClick2 = () => {
+        this.props.history.push("./Terms");
+    }
+
+    render() {
+        return (
             <div style={{
                 backgroundColor: 'white',
                 fontWeight: 'bold',
@@ -16,13 +26,27 @@ export default function FootInfo() {
                         padding: ' 5px 10px',
                         float: 'left'
                     }}>Polici PBC © 2021 </p>
-                    <p style={{
-                        padding: ' 5px 10px',
-                        float: 'left'
-                    }}>Privacy Policy</p>
-                    <p style={{
-                        padding: ' 5px 10px', float: 'left'
-                    }}>Terms of Use</p>
+
+                    <Router>
+                        <Link to="./Privacy">
+                            <p style={{
+                                padding: ' 5px 10px',
+                                float: 'left',
+                                color: 'black',
+                            }}><a onClick={this.handleClick}>Privacy Policy</a></p>
+                        </Link>
+                    </Router>
+
+
+                    <Router>
+                        <Link to="./Terms">
+                            <p style={{
+                                padding: ' 5px 10px',
+                                float: 'left',
+                                color: 'black',
+                            }}><a onClick={this.handleClick2}>Terms of Use</a></p>
+                        </Link>
+                    </Router>
                 </div>
 
                 <div style={{
@@ -32,6 +56,7 @@ export default function FootInfo() {
                 </div>
             </div>
 
-
-    );
+        );
+    }
 }
+export default withRouter(Footer);

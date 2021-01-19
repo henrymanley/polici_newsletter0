@@ -76,7 +76,7 @@ export default class OutlinedButtons extends Component {
                     <h2>Try it out! 🚀</h2>
                     <input
                         type='text'
-                        defaultValue="Your Email"
+                        name="email"
                         onChange={this.updateEmail}
                     />
                     <input

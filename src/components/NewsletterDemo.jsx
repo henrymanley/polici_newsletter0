@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Newsletter.css.css';
+// import '../Newsletter.css';
 
 export default function FootInfo() {
     return (
@@ -8,7 +8,7 @@ export default function FootInfo() {
             <table style ={{width: "650px", cellspacing: 0}}>
                 <tr bgcolor ="white">
                     <td style={{
-                        paddingRight: '30px'
+                        paddingRight: '30px',
                         fontsize: '12px',
                         height: '50px',
                         align: 'right',
@@ -19,9 +19,10 @@ export default function FootInfo() {
                             </span>
                     </td>
                 </tr>
-                    <tr bgcolor ="white">
+                    <tr>
                         <td>
                             <table width="550px">
+
                                 <tr bgcolor ="white">
                                     <td style={{width: '200px', textalign:'left'}}>
                                         <a href="https://www.polici.org/?utm_source=newsletter&utm_medium=email&utm_campaign=August%2016%20-%20Heading%20Up&utm_content=Header%20logo&utm_term=2020-10-10"/>
@@ -32,8 +33,9 @@ export default function FootInfo() {
                                     </td>
                                 </tr>
                             </table>
-                        </tr>
-                    </td>
+                        </td>
+                    </tr>
+
             </table>
         </div>
 
