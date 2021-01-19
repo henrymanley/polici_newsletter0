@@ -41,9 +41,65 @@ a:active {
 
 .box {
   display: flex;
-  align-items: stretch;
 }
 
 .submitIntro{
   font-size: 30px;
+}
+
+.waterfallimage {
+  width: 600px;
+}
+
+
+.row {
+  display: flex;
+}
+
+.column1 {
+  flex: 30%;
+}
+
+.column2 {
+  flex: 100%;
+}
+
+
+.outer {
+  overflow: hidden;
+  position: relative;
+}
+.inner {
+  position: relative;
+  bottom: -50px;
+  top: -70px;
+}
+
+input[type=text] {
+  width: 55%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-family: 'Karla', sans-serif;
+  color: darkgray;
+
+}
+
+
+input[type=submit] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-family: 'Karla', sans-serif;
+  color: white;
+  font-size: 16px;
+  background-color: #EE1D52;
+  border-radius:10px;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+a:hover {
+  font-weight: 900;
 }

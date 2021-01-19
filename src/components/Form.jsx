@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import AOS from 'aos'
+import 'aos/dist/aos.css';
+AOS.init();
 
 export default class OutlinedButtons extends Component {
     constructor(props) {
@@ -6,8 +9,10 @@ export default class OutlinedButtons extends Component {
         this.state = { 
             apiResponse: "",
             email:''};
+        AOS.init({duration: 1000});
             
     }
+
     //changing state as you type into form
     updateEmail = (event)=> {
         let email = event.target.value
@@ -43,13 +48,13 @@ export default class OutlinedButtons extends Component {
             marginBottom:'40px',
             color: "#FFFFFC",
         }}>
-            <h1 style={{fontSize:"70px"}} ><a href="https://www.polici.org/"> polici </a></h1>
+            <h1 style={{fontSize:"70px"}} data-aos="zoom-in"><a href="https://www.polici.org/"> polici </a></h1>
             <div style={{
                 textAlign: 'left',
                 paddingTop: '50px',
                 paddingBottom: '50px',
                 color: "#FFFFFC",
-                width: '50%',
+                width: '70%',
             }}>
                 <h2>
                     <bf>Bringing Data to Your Day In Under Three Minutes 📈</bf>
@@ -57,28 +62,31 @@ export default class OutlinedButtons extends Component {
 
 
                 <hr></hr>
-                <p>
+                <h3>
                     Get the free, weekly email that brings data science,
                     cutting edge research findings, and a splash of humor to the headlines.
                     <br />
                     <br /> <a style={{
                     textDecoration:'underline'
                 }}>Check out our last issue. </a>
-                </p>
+                </h3>
             </div>
-            <form  noValidate autoComplete="on" onSubmit={this.addEmail}>
-                <p>Submit your email if you want to follow our Newsletter!</p>
-                <input
-        type='text'
-        onChange={this.updateEmail}
-      />
-      <input
-        type='submit'
-      />
-            </form>
+            <div data-aos="fade-right" data-aos-easing="ease-in-sine">
+                <form  noValidate autoComplete="on" onSubmit={this.addEmail}>
+                    <h2>Try it out! 🚀</h2>
+                    <input
+                        type='text'
+                        name="email"
+                        onChange={this.updateEmail}
+                    />
+                    <input
+                        type='submit'
+                    />
+                </form>
+            </div>
 
         <p >{this.state.apiResponse}</p>
     </div>
-);}
-    
+);
+    }
 }
