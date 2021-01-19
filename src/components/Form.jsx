@@ -71,17 +71,20 @@ export default class OutlinedButtons extends Component {
                 }}>Check out our last issue. </a>
                 </h3>
             </div>
-            <div data-aos="fade-right" data-aos-easing="ease-in-sine">
-                <form  noValidate autoComplete="on" onSubmit={this.addEmail}>
+            <div data-aos="fade-right" data-aos-easing="ease-in-sine" >
+                <form  noValidate autoComplete="on" onSubmit={this.addEmail} style={{flex:'60%'}}>
                     <h2>Try it out! 🚀</h2>
                     <input
                         type='text'
                         name="email"
                         onChange={this.updateEmail}
                     />
-                    <input
-                        type='submit'
-                    />
+                    <div style={{flex:'40%'}}>
+                        <input
+                            type='submit'
+                        />
+                    </div>
+
                 </form>
             </div>
 

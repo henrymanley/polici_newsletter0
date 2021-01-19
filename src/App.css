@@ -58,10 +58,11 @@ a:active {
 
 .column1 {
   flex: 30%;
+  margin: 0px;
 }
 
 .column2 {
-  flex: 100%;
+  flex: 60%;
 }
 
 
@@ -86,7 +87,6 @@ input[type=text] {
 
 
 input[type=submit] {
-  width: 20%;
   padding: 12px 20px;
   margin: 8px 0;
   font-family: 'Karla', sans-serif;

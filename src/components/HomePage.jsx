@@ -33,7 +33,7 @@ class Home extends React.Component {
                                     <Form></Form>
                                 </div>
 
-                                <div className="column2" style={{backgroundColor: "#000000", position: "relative"}}>
+                                <div className="column2" style={{backgroundColor: "red", position: "relative", width:"100%"}}>
                                     <div className="outer">
                                         <div className="inner">
                                             <img className="waterfallimage" src={Water} alt="Infographics"/>
@@ -45,7 +45,7 @@ class Home extends React.Component {
                         </div>
 
 
-                        <div style={{position: 'absolute'}}>
+                        <div style={{position: 'absolute', width: '100%'}}>
                             <Footer></Footer>
                         </div>
 
