@@ -33,7 +33,7 @@ class Home extends React.Component {
                                     <Form></Form>
                                 </div>
 
-                                <div className="column2" style={{backgroundColor: "red", position: "relative", width:"100%"}}>
+                                <div className="column2" style={{backgroundColor: "#000000", position: "relative", width:"100%"}}>
                                     <div className="outer">
                                         <div className="inner">
                                             <img className="waterfallimage" src={Water} alt="Infographics"/>

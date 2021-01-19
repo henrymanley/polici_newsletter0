@@ -6,14 +6,15 @@
 .signup-col {
     padding: 0 50px;
     color: 'white';
+    align-content: center;
 }
 .signup-row {
     padding: 0 20px;
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(35, 39, 100, .15);
-    margin-bottom: 25px;
     color: 'white';
+    align-content: center;
 }
 .submit-button {
     padding: 16px 40px;
@@ -31,6 +32,7 @@
 .signup-container {
     width: 50%;
     margin-bottom: 100px;
+
 }
 .signup-container p {
     font-size: 24px;

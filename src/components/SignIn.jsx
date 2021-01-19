@@ -41,28 +41,23 @@ export default class SignIn extends Component {
                     <h1> Log In 🔒</h1>
                 <div className="signup-form-container">
                     <form onSubmit={this.handleSubmit} className="signup-form">
-                        <Container>
+
                             <Row >
-                                <Col >
-                                    <p><label htmlFor="userkey" className='Firstnamet' style ={{color: 'white', textAlign:'left'}}>User Email</label></p>
+                                    <p><label htmlFor="userkey" className='Firstnamet' style ={{color: 'white', textAlign:'left', marginRight:'42px'}}>Email</label></p>
                                     <input id="userkey" name="userkey" type="text"
 
                                     />
-                                </Col>
                             </Row>
                             <Row >
-                                <Col  >
-                                    <p> <label htmlFor="userval" className="Lastnamet" style ={{color: 'white', textAlign:'left'}}>Password</label></p>
+                                    <p> <label htmlFor="userval" className="Lastnamet" style ={{color: 'white', textAlign:'left', marginRight:'10px'}}>Password</label></p>
                                     <input id="userval" name="userval" type="text"
 
                                     />
-                                </Col>
                             </Row>
                             <Row >
                                 <input type="submit" value="Submit"
-                                       className="submit-button" style={{marginBottom: '60px'}}/>
+                                       className="submit-button" style={{marginBottom: '60px', margin:'auto'}}/>
                             </Row>
-                        </Container>
 
                     </form>
                 </div>
