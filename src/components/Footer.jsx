@@ -6,18 +6,24 @@ export default function FootInfo() {
             <div style={{
                 backgroundColor: 'white',
                 fontWeight: 'bold',
-                display: 'flex',
-                padding: '20px'
+                display: 'inline-flex',
+                padding: '20px',
+                width: '100%',
+
             }}>
-                <p style={{
-                    padding: ' 5px 10px'
-                }}>Polici PBC © 2021 </p>
-                <p style={{
-                    padding: ' 5px 10px'
-                }}>Privacy Policy</p>
-                <p style={{
-                    padding: ' 5px 10px'
-                }}>Terms of Use</p>
+                <div>
+                    <p style={{
+                        padding: ' 5px 10px',
+                        float: 'left'
+                    }}>Polici PBC © 2021 </p>
+                    <p style={{
+                        padding: ' 5px 10px',
+                        float: 'left'
+                    }}>Privacy Policy</p>
+                    <p style={{
+                        padding: ' 5px 10px', float: 'left'
+                    }}>Terms of Use</p>
+                </div>
 
                 <div style={{
                     marginRight: '0px'
