@@ -1,9 +1,16 @@
 import React, {Component} from 'react';
 import AOS from 'aos'
+import '../App.css';
 import 'aos/dist/aos.css';
+import {BrowserRouter as Router, Link, withRouter} from "react-router-dom";
 AOS.init();
 
-export default class OutlinedButtons extends Component {
+class OutlinedButtons extends Component {
+
+    handleClick = () => {
+        this.props.history.push("./Demo");
+    }
+
     constructor(props) {
         super(props);
         this.state = { 
@@ -30,6 +37,8 @@ export default class OutlinedButtons extends Component {
             })
         })
     }
+
+
     //test to see if front end server is connected to backend API
     // callAPI() {
     //     fetch("http://localhost:8000/")
@@ -42,54 +51,66 @@ export default class OutlinedButtons extends Component {
     }
     render(){
         return (
-        <div style={{
-            textAlign:'left',
-            paddingLeft: '40px',
-            marginBottom:'40px',
-            color: "#FFFFFC",
-        }}>
-            <h1 style={{fontSize:"70px"}} data-aos="zoom-in"><a href="https://www.polici.org/"> polici </a></h1>
-            <div style={{
-                textAlign: 'left',
-                paddingTop: '50px',
-                paddingBottom: '50px',
-                color: "#FFFFFC",
-                width: '70%',
-            }}>
-                <h2>
-                    <bf>Bringing Data to Your Day In Under Three Minutes 📈</bf>
-                </h2>
+                <div style={{
+                    textAlign:'left',
+                    paddingLeft: '40px',
+                    marginBottom:'40px',
+                    color: "#FFFFFC",
+                }}
+                >
+                    <h1 style={{fontSize:"70px"}} data-aos="zoom-in"><a href="https://www.polici.org/"> polici </a></h1>
+                    <div style={{
+                        textAlign: 'left',
+                        paddingTop: '50px',
+                        paddingBottom: '50px',
+                        color: "#FFFFFC",
+                        width: '70%',
+                    }}>
+                        <h2>
+                            <bf>Bringing Data to Your Day In Under Three Minutes 📈</bf>
+                        </h2>
 
 
-                <hr></hr>
-                <h3>
-                    Get the free, weekly email that brings data science,
-                    cutting edge research findings, and a splash of humor to the headlines.
-                    <br />
-                    <br /> <a style={{
-                    textDecoration:'underline'
-                }}>Check out our last issue. </a>
-                </h3>
-            </div>
-            <div data-aos="fade-right" data-aos-easing="ease-in-sine" >
-                <form  noValidate autoComplete="on" onSubmit={this.addEmail} style={{flex:'60%'}}>
-                    <h2>Try it out! 🚀</h2>
-                    <input
-                        type='text'
-                        name="email"
-                        onChange={this.updateEmail}
-                    />
-                    <div style={{flex:'40%'}}>
-                        <input
-                            type='submit'
-                        />
+                        <hr></hr>
+                        <h3>
+                            Get the free, weekly email that brings data science,
+                            cutting edge research findings, and a splash of humor to the headlines.
+                            <br />
+                            <br />
+
+                            <Router>
+                                <Link to="./Demo" onClick={this.handleClick}>
+                                    <h3 style={{
+                                        textDecoration:'underline'
+                                    }}>
+                                        Check out our last issue.
+                                    </h3>
+                                </Link>
+                            </Router>
+
+                        </h3>
+                    </div>
+                    <div data-aos="zoom-in" >
+                        <form  noValidate autoComplete="on" onSubmit={this.addEmail} style={{flex:'60%'}}>
+                            <h2>Try it out! 🚀</h2>
+                            <input
+                                type='text'
+                                name="email"
+                                onChange={this.updateEmail}
+                            />
+                            <div style={{flex:'40%'}}>
+                                <input
+                                    type='submit'
+                                />
+                            </div>
+
+                        </form>
                     </div>
 
-                </form>
-            </div>
-
-        <p >{this.state.apiResponse}</p>
-    </div>
+                    <p >{this.state.apiResponse}</p>
+                </div>
 );
     }
 }
+
+export default withRouter(OutlinedButtons);

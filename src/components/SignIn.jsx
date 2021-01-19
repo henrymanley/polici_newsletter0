@@ -3,7 +3,6 @@ import '../Signup.css'
 import '../App.css'
 import { Container, Row, Col } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom'
-import {createMuiTheme} from "@material-ui/core/styles";
 
 const key = 'founders@polici.org'
 const val = 'test'

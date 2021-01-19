@@ -1,21 +1,12 @@
+import AppTheme from '../App.css';
 import React from 'react';
-import {createMuiTheme, ThemeProvider} from "@material-ui/core/styles";
 import Form from "./Form";
 import Footer from "./Footer";
-import '../App.css';
 import Water from '../assets/water.png';
 import AOS from 'aos'
 import 'aos/dist/aos.css';
-AOS.init();
 
-const theme = createMuiTheme({
-    backgroundColor: "#000000",
-    typography: {
-        fontFamily: [
-            'Karla',
-            'sans-serif',
-        ].join(','),
-    },});
+AOS.init();
 
 class Home extends React.Component {
 
@@ -23,7 +14,7 @@ class Home extends React.Component {
         return (
             <div>
 
-                <ThemeProvider theme={theme}>
+                <div style={AppTheme}>
 
                     <div className="App">
                         <div style={{position: "relative", height: '800px', overflow: "hidden"}}>
@@ -50,7 +41,7 @@ class Home extends React.Component {
                         </div>
 
                     </div>
-                </ThemeProvider>
+                </div>
             </div>
         );
     }

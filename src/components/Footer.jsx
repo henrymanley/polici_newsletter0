@@ -4,6 +4,10 @@ import {BrowserRouter as Router, Link, withRouter} from "react-router-dom";
 
 class Footer extends Component {
     handleClick = () => {
+        this.props.history.push("./About");
+    }
+
+    handleClick1 = () => {
         this.props.history.push("./Privacy");
     }
 
@@ -27,13 +31,25 @@ class Footer extends Component {
                         float: 'left'
                     }}>Polici PBC © 2021 </p>
 
+
+                    <Router>
+                        <Link to="./About">
+                            <p style={{
+                                padding: ' 5px 10px',
+                                float: 'left',
+                                color: 'black',
+                            }}><a onClick={this.handleClick}>About Us</a></p>
+                        </Link>
+                    </Router>
+
+
                     <Router>
                         <Link to="./Privacy">
                             <p style={{
                                 padding: ' 5px 10px',
                                 float: 'left',
                                 color: 'black',
-                            }}><a onClick={this.handleClick}>Privacy Policy</a></p>
+                            }}><a onClick={this.handleClick1}>Privacy Policy</a></p>
                         </Link>
                     </Router>
 
