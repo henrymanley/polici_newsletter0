@@ -1,8 +1,10 @@
 import React from 'react';
+import Header from "./Header";
 
 export default function Privacy(){
     return (
         <div style ={{backgroundColor: '#000000', width:'100%', height:'100%'}}>
+            <Header />
 
         <div style={{color: 'white', backgroundColor: '#000000', marginLeft:'auto', marginRight:'auto', width:'60%', padding:'60px'}}>
             <h1> Polici Privacy Policy</h1>

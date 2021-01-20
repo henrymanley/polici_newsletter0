@@ -4,7 +4,8 @@ import Aadi from '../assets/aadi_headshot.png';
 import {withRouter} from "react-router-dom";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import IconButton from "@material-ui/core/IconButton";
-import Footer from "./Footer";
+import ContactFooter from "./ContactFooter";
+import Header from "./Header";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 
@@ -23,8 +24,10 @@ class About extends React.Component {
 
     render() {
         return (
-            <div className="App" style={{marginTop:'40px'}}>
-                <div style={{width:"50%", margin:'auto', maxWidth:'650px', color:'white', textAlign:'left', minWidth:'350px'}}>
+            <div className="App" >
+                <Header />
+                <div style={{width:"50%", margin:'auto', maxWidth:'650px', color:'white', textAlign:'left', minWidth:'350px', paddingTop:'30px'}}>
+                    <br /><br /><br />
                     <h1>Delivering the best information out there, in the easiest way possible. 📊 </h1>
                     <hr />
                     <br />
@@ -39,11 +42,14 @@ class About extends React.Component {
                     <hr />
                     <br />
 
-                    <div style={{flex:'80%', position: 'relative', margin:'auto', textAlign:'center'}}>
-                        <div data-aos="zoom-in-left">
-                            <img className="aboutimage" src={Henry} alt="Henry" style={{borderRadius:'20px', width:'80%'}}/>
-                        </div>
+                    <div style={{flex:'80%', margin:'auto', textAlign:'center'}}>
+
+                        <a href="https://www.henrymanley.com/">
+                            <div data-aos="zoom-in-left">
+                                <img className="aboutimage" src={Henry} alt="Henry" style={{borderRadius:'20px', width:'80%'}}/>
+                            </div>
                             <h2>Henry Manley</h2>
+                        </a>
                         <h3>Junior, Cornell University</h3>
 
                         <IconButton target="_blank" href="https://www.linkedin.com/in/henry-manley-681213173/">
@@ -72,8 +78,9 @@ class About extends React.Component {
 
 <hr style={{marginBottom:'60px'}} />
                 </div>
-<Footer />
+                <ContactFooter />
             </div>
+
         );
     }
 }

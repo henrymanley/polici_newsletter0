@@ -90,7 +90,7 @@ class OutlinedButtons extends Component {
 
                         </h3>
                     </div>
-                    <div data-aos="zoom-in" >
+                    <div >
                         <form  noValidate autoComplete="on" onSubmit={this.addEmail} style={{flex:'60%'}}>
                             <h2>Try it out! 🚀</h2>
                             <input

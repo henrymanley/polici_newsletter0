@@ -19,19 +19,6 @@ class Contact extends Component {
             <div style={{width: '100%', display: 'inline-flex'}}>
                 <Box textAlign="right" fontWeight="fontWeightBold" fontSize="h5.fontSize" style={{marginRight: '30px'}}>
 
-                    <IconButton target="_blank" href="mailto:founders@polici.org">
-                        <EmailIcon style={{
-                            padding: "10px 5px",
-                            color: 'black'
-                        }}/>
-                    </IconButton>
-
-                    <IconButton target="_blank" href="https://www.linkedin.com/company/polici">
-                        <LinkedInIcon style={{
-                            padding: "10px 5px",
-                            color: 'black'
-                        }}/>
-                    </IconButton>
                     <IconButton target="_blank" href="https://www.instagram.com/policiorg">
                         <InstagramIcon style={{
                             padding: "10px 5px",
