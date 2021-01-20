@@ -20,17 +20,13 @@ class Footer extends Component {
             <div style={{
                 backgroundColor: 'white',
                 fontWeight: 'bold',
-                display: 'inline-flex',
+                display: 'flex',
+                flexFlow:'row wrap',
                 padding: '20px',
                 width: '100%',
-
+                minWidth: '200px'
             }}>
                 <div>
-                    <p style={{
-                        padding: ' 5px 10px',
-                        float: 'left'
-                    }}>Polici PBC © 2021 </p>
-
 
                     <Router>
                         <Link to="./About">

@@ -20,11 +20,10 @@ class NewsletterDemo extends React.Component {
         return (
             <div>
                 <Header />
-                <div style={DemoTheme} data-aos="fade-up">
+                <div theme={DemoTheme} data-aos="fade-up">
 
-                    <div style={{color: 'white', margin: 'auto', width:'75%', maxWidth:'650px'}} >
-                        <div className="spacer"/>
-                        <div className="spacer"/>
+                    <div style={{color: 'white', margin: 'auto', width:'85%', maxWidth:'650px'}} >
+                        <div className="bigspacer"/>
                         <div className="grid-container" style={{backgroundColor:"#000000"}}>
                         </div>
                         <div className ="roundtop">

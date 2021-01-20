@@ -42,7 +42,7 @@ a.newsletter-demo {
 .newsh1 {
     background-color: white;
     color: #000000;
-    padding: 10px;
+    padding: 1px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
@@ -66,6 +66,11 @@ h2.newsl {
 .spacer{
     height:25px;
 }
+
+.bigspacer{
+    height:100px;
+}
+
 
 hr {
     color: grey;

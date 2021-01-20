@@ -10,7 +10,8 @@ class Header extends Component {
         return (
             <Router>
                 <Link to="/">
-                    <div onClick={this.handleClick} style={{height:'85px',
+                    <div onClick={this.handleClick} style={{
+                        height:'85px',
                         position:'fixed', width:"100%",
                         backgroundColor:'black',
                         marginTop:'-10px',

@@ -17,10 +17,10 @@ class Home extends React.Component {
                 <div style={AppTheme}>
 
                     <div className="App">
-                        <div style={{position: "relative", height: '800px', overflow: "hidden"}}>
+                        <div style={{position: "relative", height: '800px', overflow: "hidden", marginRight:'-40px'}}>
 
                             <div className="row">
-                                <div className="column1"  style={{minWidth: '570px'}}>
+                                <div className="column1"  style={{minWidth: '540px'}}>
                                     <Form></Form>
                                 </div>
 

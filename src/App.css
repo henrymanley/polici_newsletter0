@@ -4,8 +4,8 @@
   text-align: center;
   font-family: 'Karla', sans-serif;
   background: #000000;
-  color:'white'
-  /*margin: auto;*/
+  color:'white';
+  margin: auto;
 }
 
 .App-header {
@@ -76,12 +76,20 @@ a:hover {
   top: -70px;
 }
 
+
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 input[type=text] {
   width: 55%;
   padding: 12px 20px;
   margin: 8px 0;
   font-family: 'Karla', sans-serif;
-  color: darkgray;
+  color: black;
 
 }
 

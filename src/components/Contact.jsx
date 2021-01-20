@@ -16,7 +16,7 @@ class Contact extends Component {
 
     render() {
         return (
-            <div style={{width: '100%', display: 'inline-flex'}}>
+            <div style={{width: '100%', display: 'inline-flex', minWidth:"100px"}}>
                 <Box textAlign="right" fontWeight="fontWeightBold" fontSize="h5.fontSize" style={{marginRight: '30px'}}>
 
                     <IconButton target="_blank" href="https://www.instagram.com/policiorg">

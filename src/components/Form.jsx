@@ -56,6 +56,7 @@ class OutlinedButtons extends Component {
                     paddingLeft: '40px',
                     marginBottom:'40px',
                     color: "#FFFFFC",
+                    backgroundColor:"#000000"
                 }}
                 >
                     <h1 style={{fontSize:"70px"}} data-aos="zoom-in"><a href="https://www.polici.org/"> polici </a></h1>
@@ -95,6 +96,7 @@ class OutlinedButtons extends Component {
                             <h2>Try it out! 🚀</h2>
                             <input
                                 type='text'
+                                placeholder="Email"
                                 name="email"
                                 onChange={this.updateEmail}
                             />
