@@ -8,9 +8,11 @@ import Graph4 from '../assets/graph4.png';
 import Graph5 from '../assets/graph5.png';
 import Graph6 from '../assets/graph6.png';
 import Header from "./Header";
+import Submit from "./Submit";
 import {withRouter} from "react-router-dom";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
+import Footer from "./Footer";
 
 AOS.init();
 
@@ -220,9 +222,14 @@ class NewsletterDemo extends React.Component {
                             </div>
                         </div>
                         <div className="spacer"/>
-
+                        <hr />
+                        <Submit />
+                        <div className="spacer"/>
+                        <hr />
+                        <div className="bigspacer"/>
                     </div>
                 </div>
+                <Footer />
             </div>
 
 

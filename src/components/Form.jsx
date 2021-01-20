@@ -76,21 +76,10 @@ class OutlinedButtons extends Component {
                         <h3>
                             Get the free, weekly email that brings data science,
                             cutting edge research findings, and a splash of humor to the headlines.
-                            <br />
-                            <br />
-
-                            <Router>
-                                <Link to="./Demo" onClick={this.handleClick}>
-                                    <h3 style={{
-                                        textDecoration:'underline'
-                                    }}>
-                                        Check out our last issue.
-                                    </h3>
-                                </Link>
-                            </Router>
 
                         </h3>
                     </div>
+
                     <div >
                         <form  noValidate autoComplete="on" onSubmit={this.addEmail} style={{flex:'60%'}}>
                             <h2>Try it out! 🚀</h2>
@@ -110,6 +99,19 @@ class OutlinedButtons extends Component {
                     </div>
 
                     <p >{this.state.apiResponse}</p>
+
+                    <Router>
+                        <Link to="./Demo" onClick={this.handleClick}>
+                            <h4 style={{
+                                textDecoration:'underline'
+                            }}>
+                                <i>Check out our last issue.</i>
+                            </h4>
+                        </Link>
+                    </Router>
+
+
+
                 </div>
 );
     }
