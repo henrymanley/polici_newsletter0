@@ -38,10 +38,10 @@ class OutlinedButtons extends Component {
                 'email': this.state.email
             })
         }).then(function (response) {
-            if (!response.ok) {
-                console.log(response.json())
-            }
+            return response.json();
 
+        }).then(function (data) {
+            console.log(data);
         })
     }
 
