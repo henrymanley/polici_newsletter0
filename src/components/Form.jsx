@@ -40,14 +40,14 @@ class OutlinedButtons extends Component {
 
 
     //test to see if front end server is connected to backend API
-    // callAPI() {
-    //     fetch("http://localhost:8000/")
-    //     .then(res => res.text())
-    //     .then(res => this.setState({ apiResponse: res }));
-    // }
+    callAPI() {
+        fetch("http://localhost:8000/")
+        .then(res => res.text())
+        .then(res => this.setState({ apiResponse: res }));
+    }
     
     componentWillMount() {
-        //this.callAPI();
+        this.callAPI();
     }
     render(){
         return (
