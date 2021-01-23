@@ -30,7 +30,7 @@ class OutlinedButtons extends Component {
     addEmail = (event)=> {
         event.preventDefault()
         console.log(this.state)
-        fetch('https://main.d2957ulfajgvdq.amplifyapp.com/api/email/', {
+        fetch('https://polici-web-302404.ue.r.appspot.com/api/email/', {
             method: 'post',
             body: new URLSearchParams({
                 'email': this.state.email
