@@ -5,6 +5,10 @@ import 'aos/dist/aos.css';
 import {BrowserRouter as Router, Link, withRouter} from "react-router-dom";
 AOS.init();
 
+
+var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+    targetUrl = 'https://polici-web-302404.ue.r.appspot.com/api/email/',
+    getTargetUrl = 'https://polici-web-302404.ue.r.appspot.com/'
 class OutlinedButtons extends Component {
 
     handleClick = () => {
@@ -26,11 +30,12 @@ class OutlinedButtons extends Component {
         this.setState({email: email})
         console.log("updated")
     }
+    
     //submitting email to database
     addEmail = (event)=> {
         event.preventDefault()
         console.log(this.state)
-        fetch('https://polici-web-302404.ue.r.appspot.com/api/email/', {
+        fetch(proxyUrl + targetUrl, {
             method: 'post',
             body: new URLSearchParams({
                 'email': this.state.email
@@ -41,7 +46,7 @@ class OutlinedButtons extends Component {
 
     //test to see if front end server is connected to backend API
     callAPI() {
-        fetch("https://polici-web-302404.ue.r.appspot.com/")
+        fetch(proxyUrl + getTargetUrl)
         .then(res => res.text())
         .then(res => this.setState({ apiResponse: res }));
     }
