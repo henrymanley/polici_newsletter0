@@ -45,14 +45,14 @@ class OutlinedButtons extends Component {
 
 
     //test to see if front end server is connected to backend API
-    callAPI() {
-        fetch(proxyUrl + getTargetUrl)
-        .then(res => res.text())
-        .then(res => this.setState({ apiResponse: res }));
-    }
+    // callAPI() {
+    //     fetch(proxyUrl + getTargetUrl)
+    //     .then(res => res.text())
+    //     .then(res => this.setState({ apiResponse: res }));
+    // }
     
     componentWillMount() {
-        this.callAPI();
+        // this.callAPI();
     }
     render(){
         return (
@@ -103,7 +103,7 @@ class OutlinedButtons extends Component {
                         </form>
                     </div>
 
-                    <p >{this.state.apiResponse}</p>
+                    {/* <p >{this.state.apiResponse}</p> */}
 
                     <Router>
                         <Link to="./Demo" onClick={this.handleClick}>
