@@ -5,6 +5,10 @@ import 'aos/dist/aos.css';
 import { BrowserRouter as Router, Link, withRouter } from "react-router-dom";
 AOS.init();
 
+
+var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+    targetUrl = 'https://polici-web-302404.ue.r.appspot.com/api/email/',
+    getTargetUrl = 'https://polici-web-302404.ue.r.appspot.com/'
 class OutlinedButtons extends Component {
 
     handleClick = () => {
@@ -57,13 +61,13 @@ class OutlinedButtons extends Component {
 
     //test to see if front end server is connected to backend API
     // callAPI() {
-    //     fetch("http://localhost:8000/")
+    //     fetch(proxyUrl + getTargetUrl)
     //     .then(res => res.text())
     //     .then(res => this.setState({ apiResponse: res }));
     // }
 
     componentWillMount() {
-        //this.callAPI();
+        // this.callAPI();
     }
     render() {
         return (
