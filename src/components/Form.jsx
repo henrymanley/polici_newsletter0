@@ -32,7 +32,8 @@ class OutlinedButtons extends Component {
     addEmail = (event) => {
         event.preventDefault()
         console.log(this.state)
-        fetch('http://localhost:8000/api/email/', {
+        var thisResponse = this;
+        var data = fetch('http://localhost:8000/api/email/', {
             method: 'post',
             body: new URLSearchParams({
                 'email': this.state.email
@@ -41,7 +42,15 @@ class OutlinedButtons extends Component {
             return response.json();
 
         }).then(function (data) {
-            console.log(data);
+            var message = data["message"];
+            if (message == "invalid email") {
+                thisResponse.setState({ apiResponse: "Invalid email address provided." })
+            }
+            else if (message == "email logged") {
+                thisResponse.setState({ apiResponse: "", email: "" });
+                var frm = document.getElementById('emailform');
+                frm.value = "";
+            }
         })
     }
 
@@ -90,7 +99,7 @@ class OutlinedButtons extends Component {
                 <div >
                     <form noValidate autoComplete="on" onSubmit={this.addEmail} style={{ flex: '60%' }}>
                         <h2>Try it out! 🚀</h2>
-                        <input
+                        <input id="emailform"
                             type='text'
                             placeholder="Email"
                             name="email"
