@@ -3,6 +3,8 @@ import AOS from "aos";
 import {withRouter} from "react-router-dom";
 import '../App.css';
 
+var production = 'https://polici-web-302404.ue.r.appspot.com/api/email/'
+var test = 'http://localhost:8080/api/email/'
 class Submit extends Component {
 
     handleClick = () => {
@@ -25,10 +27,11 @@ class Submit extends Component {
         console.log("updated")
     }
     //submitting email to database
+
     addEmail = (event)=> {
         event.preventDefault()
         console.log(this.state)
-        fetch('https://polici-web-302404.ue.r.appspot.com/api/email/', {
+        fetch(test, {
             method: 'post',
             body: new URLSearchParams({
                 'email': this.state.email
