@@ -37,7 +37,7 @@ class OutlinedButtons extends Component {
     addEmail = (event) => {
         event.preventDefault()
         var thisResponse = this;
-        var data = fetch('http://localhost:8000/api/email/', {
+        var data = fetch(targetUrl, {
             method: 'post',
             body: new URLSearchParams({
                 'email': this.state.email
