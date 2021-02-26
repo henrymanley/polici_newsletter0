@@ -4,7 +4,7 @@ import {withRouter} from "react-router-dom";
 import '../App.css';
 
 var production = 'https://polici-web-302404.ue.r.appspot.com/api/email/'
-var test = 'http://localhost:8080/api/email/'
+var test = 'http://localhost:8000/api/email/'
 class Submit extends Component {
 
     handleClick = () => {
@@ -31,7 +31,7 @@ class Submit extends Component {
     addEmail = (event)=> {
         event.preventDefault()
         console.log(this.state)
-        fetch(test, {
+        fetch(production, {
             method: 'post',
             body: new URLSearchParams({
                 'email': this.state.email
