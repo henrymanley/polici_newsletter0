@@ -34,29 +34,28 @@ class OutlinedButtons extends Component {
     }
 
     //submitting email to database
-    addEmail = (event) => {
+    addEmail = async (event) => {
         event.preventDefault()
         var thisResponse = this;
-        var data = fetch(targetUrl, {
+        var response = await fetch('http://localhost:8000/api/email/', {
             method: 'post',
             body: new URLSearchParams({
                 'email': this.state.email
             })
-        }).then(function (response) {
-            return response.json();
-
-        }).then(function (data) {
-            var message = data["message"];
-            if (message == "invalid email") {
-                thisResponse.setState({ apiResponse: "Invalid email address provided." })
-            }
-            else if (message == "email logged") {
-                thisResponse.setState({ apiResponse: "", email: "", sent: true });
-                var frm = document.getElementById('emailform');
-                frm.value = "";
-                thisResponse.props.history.push("./PostSub");
-            }
         })
+        var status = response.status;
+        if (status == "500") {
+            thisResponse.setState({ apiResponse: "Invalid email address provided." })
+        }
+        else if (status == "201") {
+            thisResponse.setState({ apiResponse: "", email: "", sent: true });
+            var frm = document.getElementById('emailform');
+            frm.value = "";
+            thisResponse.props.history.push("./PostSub");
+        }
+        else {
+            console.log(response.json());
+        }
     }
 
 
