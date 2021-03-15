@@ -37,15 +37,17 @@ class OutlinedButtons extends Component {
     addEmail = (event) => {
         event.preventDefault()
         var thisResponse = this;
-        var data = fetch(targetUrl, {
+        var data = fetch('http://localhost:8000/api/email/', {
             method: 'post',
             body: new URLSearchParams({
                 'email': this.state.email
             })
         }).then(function (response) {
+            
             return response.json();
 
         }).then(function (data) {
+            console.log(data)
             var message = data["message"];
             if (message == "invalid email") {
                 thisResponse.setState({ apiResponse: "Invalid email address provided." })

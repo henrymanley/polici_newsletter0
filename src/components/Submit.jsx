@@ -31,6 +31,7 @@ class Submit extends Component {
     addEmail = (event)=> {
         event.preventDefault()
         console.log(this.state)
+        console.log("yello")
         fetch(production, {
             method: 'post',
             body: new URLSearchParams({
