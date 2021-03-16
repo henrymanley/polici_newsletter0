@@ -9,7 +9,7 @@ import Graph5 from '../assets/graph5.png';
 import Graph6 from '../assets/graph6.png';
 import Header from "./Header";
 import Submit from "./Submit";
-import {withRouter} from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 import Footer from "./Footer";
@@ -24,28 +24,28 @@ class NewsletterDemo extends React.Component {
                 <Header />
                 <div theme={DemoTheme} data-aos="fade-up">
 
-                    <div style={{color: 'white', margin: 'auto', width:'85%', maxWidth:'650px'}} >
-                        <div className="bigspacer"/>
-                        <div className="grid-container" style={{backgroundColor:"#000000"}}>
+                    <div style={{ color: 'white', margin: 'auto', width: '85%', maxWidth: '650px' }} >
+                        <div className="bigspacer" />
+                        <div className="grid-container" style={{ backgroundColor: "#000000" }}>
                         </div>
-                        <div className ="roundtop">
-                            <div className="grid-container" style={{backgroundColor:"white", padding:'10px', color:'black'}}>
-                                <div style={{fontSize:'30px', paddingLeft:'20px'}}>
-                                    <a href="https://www.polici.org/"><h1 style={{textAlign:'left', color:'black'}}>polici</h1></a>
+                        <div className="roundtop">
+                            <div className="grid-container" style={{ backgroundColor: "white", padding: '10px', color: 'black' }}>
+                                <div style={{ fontSize: '30px', paddingLeft: '20px' }}>
+                                    <a href="https://www.polici.org/"><h1 style={{ textAlign: 'left', color: 'black' }}>polici</h1></a>
 
                                 </div>
-                                <p className="newslp" style={{textAlign:'right'}}>January 18, 2021</p>
+                                <p className="newslp" style={{ textAlign: 'right' }}>January 18, 2021</p>
                             </div>
 
 
-                            <div style={{width: '100%', textAlign: 'center', padding:'0px'}}>
+                            <div style={{ width: '100%', textAlign: 'center', padding: '0px' }}>
                                 <div className="newsh1">
                                     <h1>Get The Picture?</h1>
                                 </div>
 
                             </div>
 
-                            <img className="newsletterimage" src={Banner} alt="Banner"/>
+                            <img className="newsletterimage" src={Banner} alt="Banner" />
 
                             <h2 className="newsl" >Good Morning</h2>
                             <hr />
@@ -56,37 +56,37 @@ class NewsletterDemo extends React.Component {
                                     your alarm? We’d guess probably checking your phone. More specifically, scrolling through
                                     Facebook meme pages as if it was the newspaper or leaving your ex’s DM on seen for the third
                                     time this week (they don’t seem to go away, do they?).
-                                    <br/> <br/>
-                                    In just one <a className ="newsletter-demo"
-                                                   href="https://www.statista.com/statistics/195140/new-user-generated-content-uploaded-by-users-per-minute/?utm_source=newsletter&utm_medium=email&utm_campaign=why_cant_we_log_off_the_silicon_valley_glue_thats_got_you_stuck&utm_term=2021-01-18"> internet
+                                    <br /> <br />
+                                    In just one <a className="newsletter-demo"
+                                        href="https://www.statista.com/statistics/195140/new-user-generated-content-uploaded-by-users-per-minute/?utm_source=newsletter&utm_medium=email&utm_campaign=why_cant_we_log_off_the_silicon_valley_glue_thats_got_you_stuck&utm_term=2021-01-18"> internet
                                     minute </a> in August of 2020, users around the world uploaded 347,222 Instagram stories and
-                                    shared 150,000 Facebook messages. That’s a whole lot of <a className ="newsletter-demo"
-                                                                                               href="https://www.washingtonpost.com/technology/2020/08/15/instagram-race-activism-slideshow-graphics/?utm_source=newsletter&utm_medium=email&utm_campaign=why_cant_we_log_off_the_silicon_valley_glue_thats_got_you_stuck"> infographics </a> and <a className ="newsletter-demo"
-                                                                                                                                                                                                                                                                                                                                                     href="https://www.theguardian.com/us-news/2020/apr/27/california-beaches-coronavirus-orange-county?utm_source=newsletter&utm_medium=email&utm_campaign=why_cant_we_log_off_the_silicon_valley_glue_thats_got_you_stuck&utm_term=2021-01-18"> pictures
+                                    shared 150,000 Facebook messages. That’s a whole lot of <a className="newsletter-demo"
+                                        href="https://www.washingtonpost.com/technology/2020/08/15/instagram-race-activism-slideshow-graphics/?utm_source=newsletter&utm_medium=email&utm_campaign=why_cant_we_log_off_the_silicon_valley_glue_thats_got_you_stuck"> infographics </a> and <a className="newsletter-demo"
+                                            href="https://www.theguardian.com/us-news/2020/apr/27/california-beaches-coronavirus-orange-county?utm_source=newsletter&utm_medium=email&utm_campaign=why_cant_we_log_off_the_silicon_valley_glue_thats_got_you_stuck&utm_term=2021-01-18"> pictures
                                     of overcrowded beaches. </a> In the same year, with many of us bored in the house, TikTok took
                                     over the saturated social media scene.
-                                    <br/> <br/>
+                                    <br /> <br />
                                     This week, the Polici team embarked on a journey to understand why certain platforms, like
-                                    Instagram and Snapchat, stay afloat, while others, like Vine, <a className ="newsletter-demo"
-                                                                                                     href="https://money.cnn.com/2017/01/17/technology/vine-shuts-down/index.html?utm_source=newsletter&utm_medium=email&utm_campaign=why_cant_we_log_off_the_silicon_valley_glue_thats_got_you_stuck&utm_term=2021-01-18"> walk
+                                    Instagram and Snapchat, stay afloat, while others, like Vine, <a className="newsletter-demo"
+                                        href="https://money.cnn.com/2017/01/17/technology/vine-shuts-down/index.html?utm_source=newsletter&utm_medium=email&utm_campaign=why_cant_we_log_off_the_silicon_valley_glue_thats_got_you_stuck&utm_term=2021-01-18"> walk
                                     the plank.</a> We took a look at what each platform offers, controversy surrounding stolen
                                     features, and their unique algorithms.
-                                    <br/> <br/>
+                                    <br /> <br />
                                     So sit back, relax, and enjoy the data. Oh, and while you’re at it, follow us on social
                                     media <bf> @policiorg. </bf>
                                 </p>
                             </div>
 
                         </div>
-                        <div className="spacer"/>
+                        <div className="spacer" />
 
 
 
-                        <div className ="roundtop">
-                            <div style={{backgroundColor:"#00A478", padding:'10px', margin:'auto'}}>
+                        <div className="roundtop">
+                            <div style={{ backgroundColor: "#00A478", padding: '10px', margin: 'auto' }}>
                                 <div className="headersect"> What's Trending? </div>
                             </div>
-                            <img className="newsletterimage" src={Graph1} alt="Trends"/>
+                            <img className="newsletterimage" src={Graph1} alt="Trends" />
                             <div className="roundbottom">
                                 <p className="newslp">
 
@@ -107,14 +107,14 @@ class NewsletterDemo extends React.Component {
                             </div>
 
                         </div>
-                        <div className="spacer"/>
+                        <div className="spacer" />
 
 
-                        <div className ="roundtop">
-                            <div style={{backgroundColor:"#00A478", padding:'10px', margin:'auto'}}>
+                        <div className="roundtop">
+                            <div style={{ backgroundColor: "#00A478", padding: '10px', margin: 'auto' }}>
                                 <div className="headersect"> Sharing is Caring? </div>
                             </div>
-                            <img className="newsletterimage" src={Graph2} alt="Social Features"/>
+                            <img className="newsletterimage" src={Graph2} alt="Social Features" />
                             <div className="roundbottom">
                                 <p className="newslp">
 
@@ -132,15 +132,15 @@ class NewsletterDemo extends React.Component {
                             </div>
 
                         </div>
-                        <div className="spacer"/>
+                        <div className="spacer" />
 
 
 
-                        <div className ="roundtop">
-                            <div style={{backgroundColor:"#00A478", padding:'10px', margin:'auto'}}>
+                        <div className="roundtop">
+                            <div style={{ backgroundColor: "#00A478", padding: '10px', margin: 'auto' }}>
                                 <div className="headersect">Snapchat Memories... </div>
                             </div>
-                            <img className="newsletterimage" src={Graph3} alt="Snapchat DAU"/>
+                            <img className="newsletterimage" src={Graph3} alt="Snapchat DAU" />
                             <div className="roundbottom">
                                 <p className="newslp">
 
@@ -161,15 +161,15 @@ class NewsletterDemo extends React.Component {
                             </div>
 
                         </div>
-                        <div className="spacer"/>
+                        <div className="spacer" />
 
 
 
-                        <div className ="roundtop">
-                            <div style={{backgroundColor:"#00A478", padding:'10px', margin:'auto'}}>
+                        <div className="roundtop">
+                            <div style={{ backgroundColor: "#00A478", padding: '10px', margin: 'auto' }}>
                                 <div className="headersect"> Stolen Thunder </div>
                             </div>
-                            <img className="newsletterimage" src={Graph4} alt="Mergers"/>
+                            <img className="newsletterimage" src={Graph4} alt="Mergers" />
                             <div className="roundbottom">
                                 <p className="newslp">
 
@@ -188,16 +188,16 @@ class NewsletterDemo extends React.Component {
                             </div>
 
                         </div>
-                        <div className="spacer"/>
+                        <div className="spacer" />
 
 
-                        <div className ="roundtop">
-                            <div style={{backgroundColor:"#00A478", padding:'10px', margin:'auto'}}>
+                        <div className="roundtop">
+                            <div style={{ backgroundColor: "#00A478", padding: '10px', margin: 'auto' }}>
                                 <div className="headersect"> It's Personal </div>
                             </div>
-                            <img className="newsletterimage" src={Graph5} alt="Algorithm"/>
-                            <img className="newsletterimage" src={Graph6} alt="Content Time"/>
-                            <div className="roundbottom" style={{marginBottom:'50px'}}>
+                            <img className="newsletterimage" src={Graph5} alt="Algorithm" />
+                            <img className="newsletterimage" src={Graph6} alt="Content Time" />
+                            <div className="roundbottom" style={{ marginBottom: '50px' }}>
                                 <p className="newslp">
 
                                     Let’s take a look at algorithms. Algorithms are essentially instructions
@@ -221,12 +221,10 @@ class NewsletterDemo extends React.Component {
                                 </p>
                             </div>
                         </div>
-                        <div className="spacer"/>
+                        <div className="spacer" />
+                        <div className="spacer" />
                         <hr />
-                        <Submit />
-                        <div className="spacer"/>
-                        <hr />
-                        <div className="bigspacer"/>
+                        <div className="bigspacer" />
                     </div>
                 </div>
                 <Footer />
