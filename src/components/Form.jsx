@@ -3,6 +3,7 @@ import AOS from 'aos'
 import '../App.css';
 import 'aos/dist/aos.css';
 import { BrowserRouter as Router, Link, withRouter } from "react-router-dom";
+import ReactGA from 'react-ga';
 AOS.init();
 
 
@@ -35,6 +36,10 @@ class OutlinedButtons extends Component {
 
     //submitting email to database
     addEmail = async (event) => {
+        ReactGA.event({
+            category: 'Navigation',
+            action: 'Clicked Submit'
+        });
         event.preventDefault()
         var thisResponse = this;
         var response = await fetch(targetUrl, {
