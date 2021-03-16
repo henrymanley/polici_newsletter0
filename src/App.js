@@ -10,6 +10,10 @@ import PostSub from "./components/PostSub";
 
 import { Switch, BrowserRouter as Router, Route, withRouter, Redirect } from "react-router-dom";
 
+import ReactGA from 'react-ga';
+const TRACKING_ID = "G-5CEQW2JXCY"; // YOUR_OWN_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
+
 
 function App() {
     return (
@@ -17,19 +21,19 @@ function App() {
             <Router>
                 <Switch>
                     <div theme={Theme}>
-            
+
                         <Route exact path="/" component={withRouter(HomePage)}></Route>
                         <Route exact path="/Marty" component={withRouter(HomePage)}></Route>
                         <Route exact path="/Albert" component={withRouter(HomePage)}></Route>
-                        <Route exact path="/Nicholas" component={withRouter(HomePage)}></Route>                                 
+                        <Route exact path="/Nicholas" component={withRouter(HomePage)}></Route>
                         <Route exact path="/Christian" component={withRouter(HomePage)}></Route>
-                        <Route exact path="/Manognya" component={withRouter(HomePage)}></Route>                                 
+                        <Route exact path="/Manognya" component={withRouter(HomePage)}></Route>
                         <Route exact path="/Daniel" component={withRouter(HomePage)}></Route>
                         <Route exact path="/Sameer" component={withRouter(HomePage)}></Route>
                         <Route exact path="/Sakshi" component={withRouter(HomePage)}></Route>
-                        <Route exact path="/Emily" component={withRouter(HomePage)}></Route>  
-                        <Route exact path="/ShengQi" component={withRouter(HomePage)}></Route>                                       
-                                                         
+                        <Route exact path="/Emily" component={withRouter(HomePage)}></Route>
+                        <Route exact path="/ShengQi" component={withRouter(HomePage)}></Route>
+
                         <Route exact path="/Newsletter" component={withRouter(Submission)}></Route>
                         <Route exact path="/Sign-In" component={withRouter(SignIn)}></Route>
                         <Route exact path="/Demo" component={withRouter(NewsletterDemo)}></Route>
