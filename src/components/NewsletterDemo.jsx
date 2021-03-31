@@ -13,12 +13,15 @@ import { withRouter } from "react-router-dom";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 import Footer from "./Footer";
+import ReactGA from "react-ga";
 
 AOS.init();
 
 
 class NewsletterDemo extends React.Component {
     render() {
+        console.log(window.location.pathname + window.location.search);
+        ReactGA.pageview(window.location.pathname + window.location.search);
         return (
             <div>
                 <Header />

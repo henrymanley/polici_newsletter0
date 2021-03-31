@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Link, withRouter } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import ReactGA from "react-ga";
 
 
 class PostSub extends Component {
   render() {
+    console.log(window.location.pathname + window.location.search);
+    ReactGA.pageview(window.location.pathname + window.location.search);
     return (
       <div className="App" >
         <Header />

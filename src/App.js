@@ -9,16 +9,11 @@ import NewsletterDemo from "./components/NewsletterDemo";
 import PostSub from "./components/PostSub";
 import RouteChangeTracker from "./components/RouteChangeTracker";
 import { Switch, BrowserRouter as Router, Route, withRouter, Redirect } from "react-router-dom";
-import ReactGA from 'react-ga';
-
-const TRACKING_ID = "UA-192376816-1"; // YOUR_OWN_TRACKING_ID
-ReactGA.initialize(TRACKING_ID);
 
 function App() {
     return (
         <div>
             <Router>
-                <RouteChangeTracker />
                 <Switch>
                     <div theme={Theme}>
 
