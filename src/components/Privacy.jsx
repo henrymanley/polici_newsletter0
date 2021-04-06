@@ -3,8 +3,6 @@ import Header from "./Header";
 import ReactGA from "react-ga";
 
 export default function Privacy() {
-    console.log(window.location.pathname + window.location.search);
-    ReactGA.pageview(window.location.pathname + window.location.search);
     return (
         <div style={{ backgroundColor: '#000000', width: '100%', height: '100%' }}>
             <Header />

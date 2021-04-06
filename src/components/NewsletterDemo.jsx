@@ -20,8 +20,6 @@ AOS.init();
 
 class NewsletterDemo extends React.Component {
     render() {
-        console.log(window.location.pathname + window.location.search);
-        ReactGA.pageview(window.location.pathname + window.location.search);
         return (
             <div>
                 <Header />
@@ -76,7 +74,7 @@ class NewsletterDemo extends React.Component {
                                     features, and their unique algorithms.
                                     <br /> <br />
                                     So sit back, relax, and enjoy the data. Oh, and while you’re at it, follow us on social
-                                    media <bf> @policiorg. </bf>
+                                    media <b> @policiorg. </b>
                                 </p>
                             </div>
 

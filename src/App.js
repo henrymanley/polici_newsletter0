@@ -9,6 +9,28 @@ import NewsletterDemo from "./components/NewsletterDemo";
 import PostSub from "./components/PostSub";
 import RouteChangeTracker from "./components/RouteChangeTracker";
 import { Switch, BrowserRouter as Router, Route, withRouter, Redirect } from "react-router-dom";
+import ReactGA from "react-ga";
+import { createBrowserHistory } from "history";
+
+// const TRACKING_ID = "UA-192376816-1"; // YOUR_OWN_TRACKING_ID
+// ReactGA.initialize(TRACKING_ID);
+
+// const history = createBrowserHistory();
+
+// // Initialize google analytics page view tracking
+// history.listen(location => {
+//     console.log("pageview: ", location.pathname);
+//     ReactGA.set({ page: location.pathname }); // Update the user's current page
+//     ReactGA.pageview(location.pathname); // Record a pageview for the given page
+// });
+
+import TagManager from 'react-gtm-module'
+
+const tagManagerArgs = {
+    gtmId: "GTM-TP4KV45"
+};
+
+TagManager.initialize(tagManagerArgs)
 
 function App() {
     return (
@@ -16,7 +38,6 @@ function App() {
             <Router>
                 <Switch>
                     <div theme={Theme}>
-
                         <Route exact path="/" component={withRouter(HomePage)}></Route>
                         <Route exact path="/Marty" component={withRouter(HomePage)}></Route>
                         <Route exact path="/Albert" component={withRouter(HomePage)}></Route>

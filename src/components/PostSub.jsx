@@ -7,8 +7,6 @@ import ReactGA from "react-ga";
 
 class PostSub extends Component {
   render() {
-    console.log(window.location.pathname + window.location.search);
-    ReactGA.pageview(window.location.pathname + window.location.search);
     return (
       <div className="App" >
         <Header />

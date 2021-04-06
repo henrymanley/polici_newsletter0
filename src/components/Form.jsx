@@ -4,6 +4,7 @@ import '../App.css';
 import 'aos/dist/aos.css';
 import { BrowserRouter as Router, Link, withRouter } from "react-router-dom";
 import ReactGA from 'react-ga';
+import TagManager from 'react-gtm-module'
 AOS.init();
 
 
@@ -36,10 +37,10 @@ class OutlinedButtons extends Component {
 
     //submitting email to database
     addEmail = async (event) => {
-        ReactGA.event({
-            category: 'Navigation',
-            action: 'Clicked Submit'
-        });
+        // ReactGA.event({
+        //     category: 'Navigation',
+        //     action: 'Clicked Submit'
+        // });
         event.preventDefault()
         var thisResponse = this;
         var response = await fetch(targetUrl, {
@@ -53,6 +54,12 @@ class OutlinedButtons extends Component {
             thisResponse.setState({ apiResponse: "Invalid email address provided." })
         }
         else if (status == "201") {
+            TagManager.dataLayer({
+                dataLayer: {
+                    event: "subscribe"
+                    /* can pass more variables here if needed */
+                }
+            });
             thisResponse.setState({ apiResponse: "", email: "", sent: true });
             var frm = document.getElementById('emailform');
             frm.value = "";
@@ -93,7 +100,7 @@ class OutlinedButtons extends Component {
                     width: '70%',
                 }}>
                     <h2>
-                        <bf>Bringing Data to Your Day In Under Three Minutes 📈</bf>
+                        <b>Bringing Data to Your Day In Under Three Minutes 📈</b>
                     </h2>
 
 
